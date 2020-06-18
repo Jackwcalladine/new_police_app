@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<head>
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+		<link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
+	</head>
+
+<style type='text/css'>
+
+.swiper-container {
+  height: 500px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.swiper-slide {
+  background-size: cover;
+  background-position: center;
+}
+
+</style>
+
+<style>
+
+body, html {
+  height: 100%;
+  font-family: "Inconsolata", sans-serif;
+}
+
+.menu {
+  display: none;
+}
+</style>
+
+<body>
+
+<script src="https://unpkg.com/swiper/js/swiper.js"></script>
+
+<div class="swiper-container">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide"
+		style="background-image:url(images/campus1.jpg);"
+	>Slide1</div>
+        <div class="swiper-slide"
+		style="background-image:url(images/gun.jpg);"
+	>Slide2</div>
+        <div class="swiper-slide"
+		style="background-image:url(images/water.jpg);"
+	>Slide 3</div>
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+</div>
+
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-large">
+
+<!-- About Container -->
+<div class="w3-container" id="about">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">ABOUT</span></h5>
+    <p>This App can be used to investigate policing in Colchester, particularly Colchester Town and the University areas.</p>
+    <p>This app analyzes the demographics of stop and search, arrests and other forms of policing .</p>
+    <div class="w3-panel w3-leftbar w3-light-grey">
+      <p><i>"Where there is power, there is resistance."</i></p>
+      <p>Michel Foucault</p>
+    </div>
+    <img src="images/campus.jpg" style="width:100%;max-width:1000px" class="w3-margin-top">
+    <p><strong>why?:</strong> as important as it is to know where crime happens, it is just as vital to know if the police are discriminating against certain areas and certain people.</p>
+    <p><strong>Areas Covered?:</strong> Greenstead, Wivenhoe, Colchester Town, University</p>
+  </div>
+</div>
+
+<!-- End page content -->
+</div>
+
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+}
+document.getElementById("myLink").click();
+</script>
+
+<script>
+  var mySwiper = new Swiper ('.swiper-container', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+
+    autoplay: {
+      delay: 4000,
+    },
+  })
+  </script>
+
+</body>
+</html>
